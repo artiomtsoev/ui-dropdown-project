@@ -1,0 +1,79 @@
+$primary: #117a8b;
+$secondary: #c8eff5;
+$font-weight-bold: 700;
+$white: white;
+$gray: #cccccc;
+$danger: #ef2929;
+$dimension: 0.4em;
+
+.button {
+    border-radius: 4px;
+    border: 1px solid $gray;
+    padding: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    i {
+        pointer-events: none;
+    }
+}
+
+.cp {
+    padding: 0;
+    border-radius: 4px;
+    border: 1px solid $gray;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+
+    &-dropdown {
+        display: flex;
+        flex-direction: column;
+
+        &__select {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+
+            &-option {
+                padding: 0.6em;
+                color: $primary;
+                background-color: transparent;
+                transition: all 0.05s ease-in-out;
+
+                &:hover {
+                    font-size: 1.1em;
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.selected {
+    background-color: $secondary;
+}
+
+.not-selected {
+    color: $gray;
+}
+
+.overflow-y {
+    overflow-y: scroll;
+    max-height: 19.5em;
+}
+
+::-webkit-scrollbar {
+    width: $dimension;
+    height: $dimension;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #bdbbbb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5e5e5e;
+    border-radius: 10px;
+}

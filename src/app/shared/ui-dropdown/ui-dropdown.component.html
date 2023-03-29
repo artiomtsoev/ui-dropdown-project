@@ -1,0 +1,19 @@
+<div #dropdownComponent class="button" (click)="expanDropdownList()">
+    <ng-container *ngIf="currentSelection; else default">
+        <span>{{currentSelection.name}}</span>
+    </ng-container>
+    <ng-template #default>
+        <span class="not-selected">{{selectedEmpty}}</span>
+    </ng-template>
+    <i *ngIf="!isExpanded" class="ico fa fa-angle-down"></i>
+    <i *ngIf="isExpanded" class="ico fa fa-angle-up"></i>
+</div>
+<div class="cp" *ngIf="isExpanded">
+    <div class="cp-dropdown">
+        <div class="cp-dropdown__select" [ngClass]="{ 'overflow-y': options && options.length > limitedOptionsCount }">
+            <div class="cp-dropdown__select-option"
+                [ngClass]="{ 'selected': currentSelection && currentSelection.id === option.id }"
+                *ngFor="let option of options" (click)="setCurrentSelection(option)">{{option?.name}}</div>
+        </div>
+    </div>
+</div>

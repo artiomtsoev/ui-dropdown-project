@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="wrapper">
+        <ui-dropdown [options]="options$ | async" (currentSelectionChange)="selectionChanged($event)"></ui-dropdown>
+    </div>
+    <ng-container *ngIf="!!selectedItem">
+        <div class="selected-result">
+            <span>{{ selectedItemMessageResult }}</span>
+        </div>
+    </ng-container>
+</div>

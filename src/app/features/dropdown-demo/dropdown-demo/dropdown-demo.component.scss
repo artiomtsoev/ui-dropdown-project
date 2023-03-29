@@ -1,0 +1,17 @@
+body {
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.wrapper {
+    width: 40%;
+}
+
+.selected-result {
+    margin: 0.5rem 3rem;
+    font-weight: 600;
+}
